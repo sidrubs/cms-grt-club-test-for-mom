@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { GatsbyImage } from "gatsby-plugin-image";;
+import { GatsbyImage } from "gatsby-plugin-image";
 
-export default function FullWidthImage(props) {
+export default function ArtifactImage(props) {
   const {
-    height = 400,
+    height = null,
     img,
     title,
     subheading,
@@ -23,7 +23,7 @@ export default function FullWidthImage(props) {
         {img?.url ? (
           <img
             src={img}
-            objectFit={"cover"}
+            objectFit={"contain"}
             objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
@@ -31,8 +31,6 @@ export default function FullWidthImage(props) {
               height: height,
               width: "100%",
             }}
-            // You can optionally force an aspect ratio for the generated image
-            aspectratio={3 / 1}
             // This is a presentational image, so the alt should be an empty string
             alt=""
             formats={["auto", "webp", "avif"]}
@@ -40,7 +38,7 @@ export default function FullWidthImage(props) {
         ) : (
           <GatsbyImage
             image={img}
-            objectFit={"cover"}
+            objectFit={"contain"}
             objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
@@ -48,8 +46,6 @@ export default function FullWidthImage(props) {
               maxHeight: height,
             }}
             layout="fullWidth"
-            // You can optionally force an aspect ratio for the generated image
-            aspectratio={3 / 1}
             // This is a presentational image, so the alt should be an empty string
             alt=""
             formats={["auto", "webp", "avif"]}
@@ -105,7 +101,7 @@ export default function FullWidthImage(props) {
   );
 }
 
-FullWidthImage.propTypes = {
+ArtifactImage.propTypes = {
   img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   height: PropTypes.number,
