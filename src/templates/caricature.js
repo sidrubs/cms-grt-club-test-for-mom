@@ -26,9 +26,6 @@ export const CaricatureTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -78,6 +75,7 @@ const CaricaturePost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        img={post.frontmatter.featuredimage.childImageSharp.gatsbyImageData}
       />
     </Layout>
   );
@@ -101,6 +99,15 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 800
+              quality: 100
+              layout: CONSTRAINED
+            )
+          }
+        }
       }
     }
   }
