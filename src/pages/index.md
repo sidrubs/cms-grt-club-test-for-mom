@@ -1,21 +1,17 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: Graaf-Reinet Club
+image: /img/grt-club.png
+heading: Graaf-Reinet Club
+subheading: A history worth remembering
 mainpitch:
-  title: Why Kaldi
+  title: What's the story
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    Since 18.. the Graaf-Reinet Club has served as a gather place for...
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec adipiscing tristique risus nec feugiat. Aliquam vestibulum morbi blandit cursus risus. Cras ornare arcu dui vivamus arcu felis bibendum ut. Viverra adipiscing at in tellus integer feugiat.
+  
+  Id venenatis a condimentum vitae sapien pellentesque habitant. Urna porttitor rhoncus dolor purus non enim. Ac felis donec et odio pellentesque diam volutpat commodo sed. Quis auctor elit sed vulputate mi sit. Eget dolor morbi non arcu risus quis varius quam. Pulvinar sapien et ligula ullamcorper malesuada proin. Id eu nisl nunc mi ipsum faucibus. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Ut diam quam nulla porttitor massa id neque aliquam vestibulum.
 intro:
   blurbs:
     - image: /img/coffee.png
