@@ -8,4 +8,8 @@ featuredimage: /img/char1.jpg
 tags:
   - caricature
 ---
+
+
+![Caricature 1](/img/char1.jpg "Char 1")
+
 This is the first caricature
