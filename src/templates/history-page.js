@@ -13,14 +13,14 @@ export const HistoryPageTemplate = ({
   image,
   title,
   description,
-  fullImage,
+  heading,
 }) => {
   const heroImage = getImage(image) || image;
   const HistoryContent = contentComponent || Content;
 
   return (
     <div className="content">
-      <FullWidthImage img={heroImage} title={title} />
+      <FullWidthImage img={heroImage} title={title} subheading={heading} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -42,14 +42,12 @@ HistoryPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
+  heading: PropTypes.string,
   description: PropTypes.string,
-  fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };
 
 const HistoryPage = ({ data }) => {
   const { markdownRemark: post } = data;
-
-  console.log("History data: ", post)
 
   return (
     <Layout>
@@ -58,12 +56,8 @@ const HistoryPage = ({ data }) => {
         contentComponent={HTMLContent}
         image={post.frontmatter.image}
         title={post.frontmatter.title}
+        heading={post.frontmatter.heading}
         description={post.frontmatter.description}
-        intro={post.frontmatter.intro}
-        main={post.frontmatter.main}
-        testimonials={post.frontmatter.testimonials}
-        fullImage={post.frontmatter.full_image}
-        pricing={post.frontmatter.pricing}
       />
     </Layout>
   );
@@ -82,6 +76,7 @@ export default HistoryPage;
 export const historyPageQuery = graphql`
   query HistoryPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         title
         image {
@@ -89,6 +84,7 @@ export const historyPageQuery = graphql`
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
+        heading
         description
       }
     }
