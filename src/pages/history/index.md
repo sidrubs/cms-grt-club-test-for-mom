@@ -1,101 +1,74 @@
 ---
-templateKey: 'product-page'
-path: /products
-title: Our Coffee
+templateKey: 'history-page'
+path: /history
+title: History
 image: /img/jumbotron.jpg
-heading: Great coffee with a conscience
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
-intro:
-  blurbs:
-    - image: /img/coffee.png
-      text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
-      text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
-testimonials:
-  - author: Elisabeth Kaurismäki
-    quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
-    quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love their
-      stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
-pricing:
-  heading: Monthly subscriptions
-  description: >-
-    We make it easy to make great coffee a part of your life. Choose one of our
-    monthly subscription plans to receive great coffee at your doorstep each
-    month. Contact us about more details and payment info.
-  plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
-      items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
-      plan: Small
-      price: '50'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
-      items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
-      plan: Big
-      price: '80'
-    - description: Want a few tiny batches from different varieties? Try our custom plan
-      items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
-      plan: Custom
-      price: '??'
+heading: A story worth remembering
 ---
+
+# A test heading
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Elementum integer enim neque
+volutpat ac tincidunt vitae. Euismod in pellentesque massa placerat duis. Leo
+duis ut diam quam nulla. Velit sed ullamcorper morbi tincidunt ornare. Duis
+tristique sollicitudin nibh sit amet. Dolor sed viverra ipsum nunc aliquet
+bibendum. Et netus et malesuada fames ac turpis egestas integer. A cras semper
+auctor neque vitae tempus quam. Velit aliquet sagittis id consectetur purus ut
+faucibus pulvinar elementum. Sit amet tellus cras adipiscing enim eu turpis.
+Vulputate enim nulla aliquet porttitor lacus luctus. Sed enim ut sem viverra
+aliquet eget sit amet. Scelerisque fermentum dui faucibus in ornare quam.
+Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Et
+malesuada fames ac turpis egestas maecenas. Cursus euismod quis viverra nibh
+cras.
+
+Lectus proin nibh nisl condimentum. Ullamcorper velit sed ullamcorper morbi
+tincidunt ornare. In hac habitasse platea dictumst vestibulum rhoncus. Diam ut
+venenatis tellus in metus vulputate eu scelerisque. Velit egestas dui id ornare.
+Porta lorem mollis aliquam ut porttitor. Viverra orci sagittis eu volutpat odio
+facilisis mauris sit amet. Elit pellentesque habitant morbi tristique senectus
+et netus et malesuada. Sed enim ut sem viverra aliquet eget. Enim tortor at
+auctor urna nunc. Lectus vestibulum mattis ullamcorper velit sed. Augue lacus
+viverra vitae congue. Vitae elementum curabitur vitae nunc sed velit.
+Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Amet risus
+nullam eget felis eget nunc lobortis. Purus non enim praesent elementum
+facilisis leo vel fringilla. Adipiscing elit pellentesque habitant morbi
+tristique. Ipsum dolor sit amet consectetur adipiscing elit pellentesque. Eu
+scelerisque felis imperdiet proin fermentum leo vel orci porta. Leo a diam
+sollicitudin tempor id eu nisl nunc.
+
+
+# Something else
+
+Malesuada bibendum arcu vitae elementum curabitur vitae. Sit amet massa vitae
+tortor condimentum lacinia quis vel eros. In pellentesque massa placerat duis
+ultricies. Venenatis a condimentum vitae sapien. Justo nec ultrices dui sapien
+eget mi. Mattis molestie a iaculis at. Est sit amet facilisis magna etiam
+tempor. Ultrices sagittis orci a scelerisque purus. Penatibus et magnis dis
+parturient montes nascetur ridiculus mus mauris. Vulputate dignissim suspendisse
+in est. Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices.
+Leo vel fringilla est ullamcorper eget nulla facilisi. Elit sed vulputate mi sit
+amet mauris commodo quis imperdiet. Sed egestas egestas fringilla phasellus.
+Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Etiam tempor
+orci eu lobortis elementum. Malesuada fames ac turpis egestas maecenas pharetra.
+
+Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Praesent
+tristique magna sit amet purus gravida quis. Lorem ipsum dolor sit amet
+consectetur adipiscing elit pellentesque habitant. Dictumst vestibulum rhoncus
+est pellentesque elit ullamcorper. Ornare arcu dui vivamus arcu felis. Eget
+egestas purus viverra accumsan in nisl nisi scelerisque eu. Curabitur vitae nunc
+sed velit dignissim sodales. Leo vel fringilla est ullamcorper eget nulla
+facilisi etiam dignissim. Enim ut sem viverra aliquet eget sit amet tellus.
+Feugiat scelerisque varius morbi enim nunc. Sit amet dictum sit amet justo donec
+enim diam. Elit sed vulputate mi sit amet mauris commodo. Vel facilisis volutpat
+est velit egestas dui.
+
+Cursus in hac habitasse platea dictumst. Mi quis hendrerit dolor magna eget est
+lorem ipsum. Consectetur adipiscing elit ut aliquam purus sit amet luctus
+venenatis. Dapibus ultrices in iaculis nunc sed augue lacus. In cursus turpis
+massa tincidunt. Enim tortor at auctor urna. Faucibus scelerisque eleifend donec
+pretium vulputate sapien nec sagittis. Platea dictumst vestibulum rhoncus est.
+Porttitor lacus luctus accumsan tortor posuere. Dignissim sodales ut eu sem
+integer vitae justo eget magna. Purus semper eget duis at tellus at. Ut tortor
+pretium viverra suspendisse potenti. Diam donec adipiscing tristique risus.
+Aliquet enim tortor at auctor urna nunc id cursus metus.
