@@ -12,7 +12,6 @@ export const HistoryPageTemplate = ({
   contentComponent,
   image,
   title,
-  description,
   heading,
 }) => {
   const heroImage = getImage(image) || image;
@@ -25,8 +24,7 @@ export const HistoryPageTemplate = ({
         <div className="container">
           <div className="section">
             <div className="columns">
-              <div className="column is-7 is-offset-1">
-                <p>{description}</p>
+              <div className="column is-10 is-offset-1">
                 <HistoryContent content={content} />
               </div>
             </div>
@@ -57,7 +55,6 @@ const HistoryPage = ({ data }) => {
         image={post.frontmatter.image}
         title={post.frontmatter.title}
         heading={post.frontmatter.heading}
-        description={post.frontmatter.description}
       />
     </Layout>
   );
@@ -85,7 +82,6 @@ export const historyPageQuery = graphql`
           }
         }
         heading
-        description
       }
     }
   }
