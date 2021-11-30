@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Graaf-Reinet Club
-image: /img/grt-club.png
+image: /img/grt-club.jpg
 heading: Graaf-Reinet Club
 subheading: A history worth remembering
 mainpitch:
