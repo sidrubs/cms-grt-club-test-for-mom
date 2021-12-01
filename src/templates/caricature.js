@@ -15,14 +15,14 @@ export const CaricatureTemplate = ({
   tags,
   title,
   helmet,
-  img,
+  image,
 }) => {
   const CaricatureContent = contentComponent || Content;
 
   return (
     <section className="section">
       {helmet || ""}
-      <ArtifactImage img={img} title={title} />
+      <ArtifactImage img={image} title={title} />
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -65,7 +65,7 @@ const CaricaturePost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Caricature">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -75,7 +75,7 @@ const CaricaturePost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        img={post.frontmatter.featuredimage.childImageSharp.gatsbyImageData}
+        image={post.frontmatter.featuredimage.childImageSharp.gatsbyImageData}
       />
     </Layout>
   );

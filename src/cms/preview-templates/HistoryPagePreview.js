@@ -2,11 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { HistoryPageTemplate } from '../../templates/history-page'
 
-const HistoryPagePreview = ({ entry, getAsset }) => {
+const HistoryPagePreview = ({ entry, getAsset, widgetFor }) => {
 
 
   return (
     <HistoryPageTemplate
+      content={widgetFor('body')}
       image={getAsset(entry.getIn(['data', 'image']))}
       title={entry.getIn(['data', 'title'])}
       heading={entry.getIn(['data', 'heading'])}

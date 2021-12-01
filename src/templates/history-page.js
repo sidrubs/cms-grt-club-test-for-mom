@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import FullWidthImage from "../components/FullWidthImage";
@@ -10,6 +12,7 @@ import FullWidthImage from "../components/FullWidthImage";
 export const HistoryPageTemplate = ({
   content,
   contentComponent,
+  helmet,
   image,
   title,
   heading,
@@ -19,6 +22,7 @@ export const HistoryPageTemplate = ({
 
   return (
     <div className="content">
+      {helmet || ""}
       <FullWidthImage img={heroImage} title={title} subheading={heading} />
       <section className="section section--gradient">
         <div className="container">
@@ -52,6 +56,15 @@ const HistoryPage = ({ data }) => {
       <HistoryPageTemplate
         content={post.html}
         contentComponent={HTMLContent}
+        helmet={
+          <Helmet titleTemplate="%s">
+            <title>{`${post.frontmatter.title}`}</title>
+            <meta
+              name="description"
+              content={`${post.frontmatter.description}`}
+            />
+          </Helmet>
+        }
         image={post.frontmatter.image}
         title={post.frontmatter.title}
         heading={post.frontmatter.heading}
@@ -82,6 +95,7 @@ export const historyPageQuery = graphql`
           }
         }
         heading
+        description
       }
     }
   }
