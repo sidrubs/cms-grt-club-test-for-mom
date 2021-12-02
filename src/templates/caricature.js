@@ -6,6 +6,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ArtifactImage from "../components/ArtifactImage";
+import CaricatureMetadata from "../components/CaricatureMetadata";
 
 // eslint-disable-next-line
 export const CaricatureTemplate = ({
@@ -16,6 +17,9 @@ export const CaricatureTemplate = ({
   title,
   helmet,
   image,
+  born,
+  died,
+  artist
 }) => {
   const CaricatureContent = contentComponent || Content;
 
@@ -26,7 +30,7 @@ export const CaricatureTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <p>{description}</p>
+            <CaricatureMetadata born={born} died={died} artist={artist} />
             <CaricatureContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -76,6 +80,9 @@ const CaricaturePost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         image={post.frontmatter.featuredimage.childImageSharp.gatsbyImageData}
+        born={post.frontmatter.born}
+        died={post.frontmatter.died}
+        artist={post.frontmatter.artist}
       />
     </Layout>
   );
@@ -99,6 +106,9 @@ export const pageQuery = graphql`
         title
         description
         tags
+        born
+        died
+        artist
         featuredimage {
           childImageSharp {
             gatsbyImageData(
