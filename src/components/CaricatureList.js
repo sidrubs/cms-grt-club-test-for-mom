@@ -23,7 +23,7 @@ class CaricatureListTemplate extends React.Component {
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          alt: `featured image thumbnail for ${post.frontmatter.title}`,
                           width:
                             post.frontmatter.featuredimage.childImageSharp
                               .gatsbyImageData.width,
@@ -41,10 +41,6 @@ class CaricatureListTemplate extends React.Component {
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
                   </p>
                 </header>
                 <p>
@@ -78,7 +74,7 @@ export default function CaricatureList() {
       query={graphql`
         query CaricatureListQuery {
           allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
+            sort: { order: ASC, fields: [frontmatter___title] }
             filter: { frontmatter: { templateKey: { eq: "caricature" } } }
           ) {
             edges {
@@ -91,7 +87,6 @@ export default function CaricatureList() {
                 frontmatter {
                   title
                   templateKey
-                  date(formatString: "MMMM DD, YYYY")
                   featuredpost
                   featuredimage {
                     childImageSharp {
