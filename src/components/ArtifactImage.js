@@ -44,6 +44,7 @@ export default function ArtifactImage(props) {
               gridArea: "1/1/15/4",
               // You can set a maximum height for the image, if you wish.
               maxHeight: height,
+              borderRadius: "10px"
             }}
             layout="fullWidth"
             // This is a presentational image, so the alt should be an empty string
