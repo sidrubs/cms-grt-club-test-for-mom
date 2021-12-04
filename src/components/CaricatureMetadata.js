@@ -13,12 +13,14 @@ const CaricatureMetadata = ({ born, died, artist }) => {
   if (artist) { metadataItems.push({ key: "Artist", value: artist }) }
 
   return (
-    <div className="metadata caricature">
-      {
-        metadataItems.map((item) => (
-          <div><b>{item.key}:</b> {item.value}</div>
-        ))
-      }
+    <div className="metadata-container">
+      <div className="metadata caricature">
+        {
+          metadataItems.map((item) => (
+            <div><b>{item.key}:</b> {item.value}</div>
+          ))
+        }
+      </div>
     </div>
   )
 };
