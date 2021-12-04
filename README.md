@@ -118,5 +118,6 @@ in as a user on [http:localhost:3000/admin](http:localhost:3000/admin).
 
 #### Adding to CMS
 
-- Add a template in `src/cms/preview-templates`. Add this template to `src/cms/cms.js`
+- Add a template in `src/cms/preview-templates`. Add this template to `src/cms/cms.js`.
+  - This create a template so the person using the CMS can kind of get an idea what things are going to look like.
 - Add form configuration to `static/admin/config.yml`.

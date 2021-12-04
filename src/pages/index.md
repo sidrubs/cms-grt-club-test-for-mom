@@ -1,66 +1,37 @@
 ---
 templateKey: index-page
+path: /
 title: Graaf-Reinet Club
 image: /img/grt-club.jpg
-heading: Graaf-Reinet Club
-subheading: A history worth remembering
-mainpitch:
-  title: What's the story
-  description: >
-    Since 18.. the Graaf-Reinet Club has served as a gather place for...
-description: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec adipiscing tristique risus nec feugiat. Aliquam vestibulum morbi blandit cursus risus. Cras ornare arcu dui vivamus arcu felis bibendum ut. Viverra adipiscing at in tellus integer feugiat.
-  
-  Id venenatis a condimentum vitae sapien pellentesque habitant. Urna porttitor rhoncus dolor purus non enim. Ac felis donec et odio pellentesque diam volutpat commodo sed. Quis auctor elit sed vulputate mi sit. Eget dolor morbi non arcu risus quis varius quam. Pulvinar sapien et ligula ullamcorper malesuada proin. Id eu nisl nunc mi ipsum faucibus. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Ut diam quam nulla porttitor massa id neque aliquam vestibulum.
-intro:
-  blurbs:
-    - image: /img/coffee.png
-      text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
-      text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
+heading: A history worth remembering
 ---
+
+# Intro
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Elementum integer enim neque
+volutpat ac tincidunt vitae. Euismod in pellentesque massa placerat duis. Leo
+duis ut diam quam nulla. Velit sed ullamcorper morbi tincidunt ornare. Duis
+tristique sollicitudin nibh sit amet. Dolor sed viverra ipsum nunc aliquet
+bibendum. Et netus et malesuada fames ac turpis egestas integer. A cras semper
+auctor neque vitae tempus quam. Velit aliquet sagittis id consectetur purus ut
+faucibus pulvinar elementum. Sit amet tellus cras adipiscing enim eu turpis.
+Vulputate enim nulla aliquet porttitor lacus luctus. Sed enim ut sem viverra
+aliquet eget sit amet. Scelerisque fermentum dui faucibus in ornare quam.
+Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Et
+malesuada fames ac turpis egestas maecenas. Cursus euismod quis viverra nibh
+cras.
+
+# Another heading
+
+Malesuada bibendum arcu vitae elementum curabitur vitae. Sit amet massa vitae
+tortor condimentum lacinia quis vel eros. In pellentesque massa placerat duis
+ultricies. Venenatis a condimentum vitae sapien. Justo nec ultrices dui sapien
+eget mi. Mattis molestie a iaculis at. Est sit amet facilisis magna etiam
+tempor. Ultrices sagittis orci a scelerisque purus. Penatibus et magnis dis
+parturient montes nascetur ridiculus mus mauris. Vulputate dignissim suspendisse
+in est. Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices.
+Leo vel fringilla est ullamcorper eget nulla facilisi. Elit sed vulputate mi sit
+amet mauris commodo quis imperdiet. Sed egestas egestas fringilla phasellus.
+Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Etiam tempor
+orci eu lobortis elementum. Malesuada fames ac turpis egestas maecenas pharetra.

@@ -1,50 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { Helmet } from "react-helmet";
+import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
 import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
+  content,
+  contentComponent,
+  helmet,
   image,
   title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
+  heading
 }) => {
   const heroImage = getImage(image) || image;
+  const HomeContent = contentComponent || Content;
 
   return (
-    <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+    <div className="content">
+      {helmet || ""}
+      <FullWidthImage img={heroImage} title={title} subheading={heading} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
             <div className="columns">
               <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                  </div>
-                  {/* <Features gridItems={intro.blurbs} /> */}
-                </div>
+                <HomeContent content={content} />
               </div>
             </div>
           </div>
@@ -55,30 +40,34 @@ export const IndexPageTemplate = ({
 };
 
 IndexPageTemplate.propTypes = {
+  content: PropTypes.node.isRequired,
+  contentComponent: PropTypes.func,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 };
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        content={post.html}
+        contentComponent={HTMLContent}
+        helmet={
+          <Helmet titleTemplate="%s">
+            <title>{`${post.frontmatter.title}`}</title>
+            <meta
+              name="description"
+              content={`${post.frontmatter.description}`}
+            />
+          </Helmet>
+        }
+        image={post.frontmatter.image}
+        title={post.frontmatter.title}
+        heading={post.frontmatter.heading}
       />
     </Layout>
   );
@@ -95,8 +84,9 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
+  query IndexPage {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         title
         image {
@@ -105,24 +95,7 @@ export const pageQuery = graphql`
           }
         }
         heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }

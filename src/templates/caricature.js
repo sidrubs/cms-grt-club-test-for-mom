@@ -6,6 +6,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ArtifactImage from "../components/ArtifactImage";
+import CaricatureMetadata from "../components/CaricatureMetadata";
 
 // eslint-disable-next-line
 export const CaricatureTemplate = ({
@@ -15,18 +16,21 @@ export const CaricatureTemplate = ({
   tags,
   title,
   helmet,
-  img,
+  image,
+  born,
+  died,
+  artist
 }) => {
   const CaricatureContent = contentComponent || Content;
 
   return (
     <section className="section">
       {helmet || ""}
-      <ArtifactImage img={img} title={title} />
+      <ArtifactImage img={image} title={title} />
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <p>{description}</p>
+            <CaricatureMetadata born={born} died={died} artist={artist} />
             <CaricatureContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -65,7 +69,7 @@ const CaricaturePost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Caricature">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -75,7 +79,10 @@ const CaricaturePost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        img={post.frontmatter.featuredimage.childImageSharp.gatsbyImageData}
+        image={post.frontmatter.featuredimage.childImageSharp.gatsbyImageData}
+        born={post.frontmatter.born}
+        died={post.frontmatter.died}
+        artist={post.frontmatter.artist}
       />
     </Layout>
   );
@@ -99,6 +106,9 @@ export const pageQuery = graphql`
         title
         description
         tags
+        born
+        died
+        artist
         featuredimage {
           childImageSharp {
             gatsbyImageData(
