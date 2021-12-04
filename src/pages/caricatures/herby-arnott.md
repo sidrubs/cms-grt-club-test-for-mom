@@ -3,7 +3,7 @@ templateKey: caricature
 title: Herbie Arnott
 description: Herbie Arnott | Caricature
 featuredpost: false
-featuredimage: /img/herby-arnott.jpg
+featuredimage: /img/caricatures/herby-arnott.jpg
 born: "1909"
 died: "1984"
 artist: V Ivanoff
