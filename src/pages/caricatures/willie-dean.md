@@ -2,7 +2,6 @@
 templateKey: caricature
 title: Willie Dean
 description: Willie Dean - Caricature
-featuredpost: true
 featuredimage: /img/caricatures/willie-dean.jpg
 born: "1895"
 died: "1945"

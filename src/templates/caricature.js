@@ -6,13 +6,12 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ArtifactImage from "../components/ArtifactImage";
-import CaricatureMetadata from "../components/CaricatureMetadata";
+import Metadata from "../components/Metadata";
 
 // eslint-disable-next-line
 export const CaricatureTemplate = ({
   content,
   contentComponent,
-  description,
   tags,
   title,
   helmet,
@@ -30,7 +29,7 @@ export const CaricatureTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <CaricatureMetadata born={born} died={died} artist={artist} />
+            <Metadata born={born} died={died} artist={artist} />
             <CaricatureContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -54,7 +53,6 @@ export const CaricatureTemplate = ({
 CaricatureTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 };
@@ -67,7 +65,6 @@ const CaricaturePost = ({ data }) => {
       <CaricatureTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Caricature">
             <title>{`${post.frontmatter.title}`}</title>
@@ -102,10 +99,8 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags
         born
         died
         artist

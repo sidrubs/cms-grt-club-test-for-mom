@@ -26,7 +26,7 @@ export default function ArtifactImage(props) {
             objectFit={"contain"}
             objectPosition={imgPosition}
             style={{
-              gridArea: "1/1",
+              gridArea: "2/1/20/4",
               // You can set a maximum height for the image, if you wish.
               height: height,
               width: "100%",
@@ -41,7 +41,7 @@ export default function ArtifactImage(props) {
             objectFit={"contain"}
             objectPosition={imgPosition}
             style={{
-              gridArea: "1/1/20/4",
+              gridArea: "2/1/20/4",
               // You can set a maximum height for the image, if you wish.
               maxHeight: height,
               borderRadius: "10px"
@@ -56,7 +56,7 @@ export default function ArtifactImage(props) {
           <div
             style={{
               // By using the same grid area for both, they are stacked on top of each other
-              gridArea: "2/2",
+              gridArea: "1/2/3",
               position: "relative",
               // This centers the other elements inside the hero component
               placeItems: "center",
