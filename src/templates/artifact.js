@@ -8,17 +8,16 @@ import ArtifactImage from "../components/ArtifactImage";
 import Metadata from "../components/Metadata";
 
 // eslint-disable-next-line
-export const CaricatureTemplate = ({
+export const ArtifactTemplate = ({
   content,
   contentComponent,
   title,
   helmet,
   image,
-  born,
-  died,
-  artist
+  donor,
+  donationDate,
 }) => {
-  const CaricatureContent = contentComponent || Content;
+  const ArtifactContent = contentComponent || Content;
 
   return (
     <section className="section">
@@ -27,8 +26,8 @@ export const CaricatureTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <Metadata born={born} died={died} artist={artist} />
-            <CaricatureContent content={content} />
+            <Metadata donor={donor} donationDate={donationDate} />
+            <ArtifactContent content={content} />
           </div>
         </div>
       </div>
@@ -36,19 +35,19 @@ export const CaricatureTemplate = ({
   );
 };
 
-CaricatureTemplate.propTypes = {
+ArtifactTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   title: PropTypes.string,
   helmet: PropTypes.object,
 };
 
-const CaricaturePost = ({ data }) => {
+const ArtifactPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <CaricatureTemplate
+      <ArtifactTemplate
         content={post.html}
         contentComponent={HTMLContent}
         helmet={
@@ -62,33 +61,31 @@ const CaricaturePost = ({ data }) => {
         }
         title={post.frontmatter.title}
         image={post.frontmatter.featuredimage.childImageSharp.gatsbyImageData}
-        born={post.frontmatter.born}
-        died={post.frontmatter.died}
-        artist={post.frontmatter.artist}
+        donor={post.frontmatter.donor}
+        donationDate={post.frontmatter.donationDate}
       />
     </Layout>
   );
 };
 
-CaricaturePost.propTypes = {
+ArtifactPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 };
 
-export default CaricaturePost;
+export default ArtifactPost;
 
 export const pageQuery = graphql`
-  query CaricaturePostByID($id: String!) {
+  query ArtifactPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
         title
         description
-        born
-        died
-        artist
+        donor
+        donationDate
         featuredimage {
           childImageSharp {
             gatsbyImageData(

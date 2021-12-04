@@ -13,7 +13,9 @@ const Metadata = (metadataMap) => {
   // Create an array of metadata objects, converting keys to start case
   const metadataItems = []
   Object.keys(metadataMap).forEach((key) => {
-    metadataItems.push({ key: startCase(key), value: metadataMap[key] })
+    if (metadataMap[key]) {
+      metadataItems.push({ key: startCase(key), value: metadataMap[key] })
+    }
   })
 
   return (

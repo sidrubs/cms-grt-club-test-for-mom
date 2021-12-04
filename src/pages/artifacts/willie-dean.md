@@ -1,12 +1,12 @@
 ---
-templateKey: caricature
+templateKey: artifact
 title: Willie Dean
 description: Willie Dean - Caricature
 featuredimage: img/willie-dean.jpg
-born: "1895"
-died: "1945"
-artist: HH Playford
+donor: test
+donationDate: "1980"
 ---
+
 # Background
 
 Willie Dean, 1895 to 1945, under the tutelage of Mr Urquhart for practically the whole of his stewardship, became a character in his own right, and knew off by heart the foibles and idiosyncrasies of all Club members.
